@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Bella",
+    "species": "Chien",
+    "breed": "Labrador",
+    "date_of_birth": "2019-05-12",
+    "picture": "https://fr.freepik.com/images-ia-gratuites/image-chien-labrador-retriever-generee-par-ai_57311598.htm#fromView=keyword&page=1&position=2&uuid=19429d8e-b07b-400a-a3fc-c080435d8a06&query=Labrador",
+    "owner": "Jean Dupont"
+  },
+  {
+    "id": 2,
+    "name": "Misty",
+    "species": "Chat",
+    "breed": "Siamois",
+    "date_of_birth": "2021-03-02",
+    "picture": "https://fr.freepik.com/images-ia-gratuites/style-vie-du-chat-mignon_210241993.htm#fromView=search&page=1&position=2&uuid=81475328-b3bc-4383-9fa8-67f1b8349dc0&query=siamois",
+    "owner": "Emma Martin"
+  },
+  {
+    "id": 3,
+    "name": "Tango",
+    "species": "Chien",
+    "breed": "Shiba Inu",
+    "date_of_birth": "2018-11-22",
+    "picture": "https://fr.freepik.com/photos-gratuite/vue-face-adorable-chien-shiba-inu_28475766.htm#fromView=search&page=1&position=11&uuid=cffc38f6-78da-4a15-a504-bbb824c6c2d9&query=shiba",
+    "owner": "Claire Bernard"
+  }
+]
