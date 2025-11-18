@@ -19,7 +19,7 @@
 | id                | integer | Yes     | Unique identifier of the vaccine record             |
 | animal_id         | integer | Yes     | Foreign key referencing the related animal          |
 | name              | varchar | Yes     | Name of the vaccine                                  |
-| administration_date | date   | Yes     | Date when the vaccine was administered               |
+| administration_date | date   | No     | Date when the vaccine was administered               |
 
 ---
 
