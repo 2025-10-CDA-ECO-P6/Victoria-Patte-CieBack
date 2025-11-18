@@ -1,69 +1,27 @@
 # Dictionnaire de données
 
----
-
-## Table: owners
-| Attribute     | Type     | Required | Description                                |
-|---------------|----------|----------|--------------------------------------------|
-| id            | integer  | Yes      | Unique identifier of the owner             |
-| name          | varchar  | Yes      | Full name of the owner                     |
-| phone         | varchar  | Yes       | Phone number                               |
-| email         | varchar  | Yes       | Email address                              |
-
----
-
-## Table: veterinarians
-| Attribute     | Type     | Required | Description                                |
-|---------------|----------|----------|--------------------------------------------|
-| id            | integer  | Yes      | Unique identifier of the veterinarian      |
-| name          | varchar  | Yes      | Full name of the veterinarian              |
-
----
-
-## Table: animals
-| Attribute       | Type     | Required | Description                                             |
-|-----------------|----------|----------|---------------------------------------------------------|
-| id              | integer  | Yes      | Unique identifier of the animal                        |
-| name            | varchar  | Yes      | Name of the animal                                     |
-| species         | varchar  | Yes      | Species of the animal (e.g., Dog, Cat)                |
-| breed           | varchar  | Yes      | Breed of the animal                                    |
-| date_of_birth   | date     | Yes      | Date of birth of the animal                            |
-| picture         | varchar  | Yes      | URL/path to the animal's picture                       |
-| owner_id        | integer  | Yes      | **Foreign key referencing the owner** (owners.id)      |
-
----
-
-## Table: vaccines
-| Attribute          | Type     | Required | Description                                             |
-|--------------------|----------|----------|---------------------------------------------------------|
-| id                 | integer  | Yes      | Unique identifier of the vaccine record                |
-| animal_id          | integer  | Yes      | Foreign key referencing the related animal (animals.id) |
-| name               | varchar  | Yes      | Name of the vaccine                                     |
-| administration_date| date     | No       | Date when the vaccine was administered                  |
-
----
-
-## Table: visits
-| Attribute        | Type     | Required | Description                                                 |
-|------------------|----------|----------|-------------------------------------------------------------|
-| id               | integer  | Yes      | Unique identifier of the visit                              |
-| animal_id        | integer  | Yes      | Foreign key referencing the related animal (animals.id)     |
-| veterinarian_id  | integer  | Yes      | **Foreign key referencing the veterinarian** (veterinarians.id) |
-| date             | date     | Yes      | Date of the visit                                           |
-| reason           | varchar  | Yes      | Reason or purpose of the visit                              |
-| status           | varchar  | Yes      | Status (`upcoming`, `past`, `cancelled`)                    |
-
----
-
-# 🔗 Relationships
-
-| From           | To             | Type  | Description                                          |
-|----------------|----------------|-------|------------------------------------------------------|
-| owners         | animals        | 1 → N | One owner can have multiple animals                  |
-| animals        | vaccines       | 1 → N | One animal can have multiple vaccines                |
-| animals        | visits         | 1 → N | One animal can have multiple visits                  |
-| veterinarians  | visits         | 1 → N | One veterinarian can conduct multiple visits         |
-
----
-
-Si tu veux, je peux aussi te générer le **MCD / MERISE**, un **diagramme UML**, ou encore la **création SQL (DDL)** de toutes ces tables.
+| Code                  | Libellé / Description                                           | Type       | Taille | Règles de gestion                        |
+|----------------------|-----------------------------------------------------------------|-----------|--------|-----------------------------------------|
+| id_owner             | Identifiant unique du propriétaire                               | integer   | -      | obligatoire, unique                     |
+| name_owner           | Nom complet du propriétaire                                      | varchar   | 100    | obligatoire                              |
+| phone_owner          | Numéro de téléphone du propriétaire                              | varchar   | 15     | obligatoire                              |
+| email_owner          | Adresse email du propriétaire                                     | varchar   | 100    | obligatoire, unique                      |
+| id_veterinarian      | Identifiant unique du vétérinaire                                 | integer   | -      | obligatoire, unique                     |
+| name_veterinarian    | Nom complet du vétérinaire                                        | varchar   | 100    | obligatoire                              |
+| id_animal            | Identifiant unique de l’animal                                    | integer   | -      | obligatoire, unique                     |
+| name_animal          | Nom de l’animal                                                   | varchar   | 50     | obligatoire                              |
+| species_animal       | Espèce de l’animal (ex : Chien, Chat)                             | varchar   | 50     | obligatoire                              |
+| breed_animal         | Race de l’animal                                                  | varchar   | 50     | obligatoire                              |
+| date_of_birth_animal | Date de naissance de l’animal                                     | date      | -      | obligatoire                              |
+| picture_animal       | URL ou chemin de la photo de l’animal                              | varchar   | 255    | obligatoire                              |
+| owner_id_animal      | Identifiant du propriétaire de l’animal                            | integer   | -      | obligatoire, clé étrangère (owners.id) |
+| id_vaccine           | Identifiant unique du vaccin                                       | integer   | -      | obligatoire, unique                     |
+| animal_id_vaccine    | Identifiant de l’animal auquel le vaccin est associé               | integer   | -      | nullable, clé étrangère (animals.id)   |
+| name_vaccine         | Nom du vaccin                                                     | varchar   | 50     | obligatoire                              |
+| administration_date_vaccine | Date d’administration du vaccin                               | date      | -      | nullable                                 |
+| id_visit             | Identifiant unique de la visite                                    | integer   | -      | obligatoire, unique                     |
+| animal_id_visit      | Identifiant de l’animal concerné par la visite                      | integer   | -      | obligatoire, clé étrangère (animals.id)|
+| veterinarian_id_visit| Identifiant du vétérinaire qui effectue la visite                  | integer   | -      | obligatoire, clé étrangère (veterinarians.id) |
+| date_visit           | Date de la visite                                                 | date      | -      | obligatoire                              |
+| reason_visit         | Motif ou objectif de la visite                                     | varchar   | 255    | obligatoire                              |
+| status_visit         | Statut de la visite (`upcoming`, `past`, `cancelled`)             | varchar   | 20     | obligatoire, valeurs ENUM                |
