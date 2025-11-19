@@ -1,34 +1,4 @@
 {
-  "owners": [
-    {
-      "id": 1,
-      "name": "Jean Dupont",
-      "phone": "0612345678",
-      "email": "jean.dupont@example.com"
-    },
-    {
-      "id": 2,
-      "name": "Emma Martin",
-      "phone": "0698765432",
-      "email": "emma.martin@example.com"
-    },
-    {
-      "id": 3,
-      "name": "Claire Bernard",
-      "phone": "0623456789",
-      "email": "claire.bernard@example.com"
-    }
-  ],
-  "veterinarians": [
-    {
-      "id": 1,
-      "name": "Dr. Élodie Martin"
-    },
-    {
-      "id": 2,
-      "name": "Dr. Lucas Bernard"
-    }
-  ],
   "animals": [
     {
       "id": 1,
@@ -37,7 +7,34 @@
       "breed": "Labrador",
       "date_of_birth": "2019-05-12",
       "picture": "/pictureAnimals/labrador.jpg",
-      "owner_id": 1
+      "owner": {
+        "id": 1,
+        "name": "Jean Dupont",
+        "phone": "0612345678",
+        "email": "jean.dupont@example.com"
+      },
+      "visits": [
+        {
+          "id": 1,
+          "veterinarian": { "id": 1, "name": "Dr. Élodie Martin" },
+          "date": "2025-11-20",
+          "reason": "Vaccination annuelle",
+          "status": "upcoming",
+          "vaccines": [
+            { "id": 1, "name": "Rage", "administration_date": "2023-06-15" }
+          ]
+        },
+        {
+          "id": 4,
+          "veterinarian": { "id": 2, "name": "Dr. Lucas Bernard" },
+          "date": "2025-12-01",
+          "reason": "Contrôle futur",
+          "status": "upcoming",
+          "vaccines": [
+            { "id": 4, "name": "Distemper", "administration_date": null }
+          ]
+        }
+      ]
     },
     {
       "id": 2,
@@ -46,7 +43,24 @@
       "breed": "Siamois",
       "date_of_birth": "2021-03-02",
       "picture": "/pictureAnimals/siamois.jpg",
-      "owner_id": 2
+      "owner": {
+        "id": 2,
+        "name": "Emma Martin",
+        "phone": "0698765432",
+        "email": "emma.martin@example.com"
+      },
+      "visits": [
+        {
+          "id": 2,
+          "veterinarian": { "id": 2, "name": "Dr. Lucas Bernard" },
+          "date": "2025-10-15",
+          "reason": "Contrôle général",
+          "status": "past",
+          "vaccines": [
+            { "id": 2, "name": "Leucose féline", "administration_date": "2023-09-10" }
+          ]
+        }
+      ]
     },
     {
       "id": 3,
@@ -55,67 +69,24 @@
       "breed": "Shiba Inu",
       "date_of_birth": "2021-10-13",
       "picture": "/pictureAnimals/Aska.jpg",
-      "owner_id": 3
-    }
-  ],
-  "visits": [
-    {
-      "id": 1,
-      "animal_id": 1,
-      "veterinarian_id": 1,
-      "date": "2025-11-20",
-      "reason": "Vaccination annuelle",
-      "status": "upcoming"
-    },
-    {
-      "id": 2,
-      "animal_id": 2,
-      "veterinarian_id": 2,
-      "date": "2025-10-15",
-      "reason": "Contrôle général",
-      "status": "past"
-    },
-    {
-      "id": 3,
-      "animal_id": 3,
-      "veterinarian_id": 1,
-      "date": "2025-09-10",
-      "reason": "Nettoyage dentaire",
-      "status": "past"
-    },
-    {
-      "id": 4,
-      "animal_id": 1,
-      "veterinarian_id": 2,
-      "date": "2025-12-01",
-      "reason": "Contrôle futur",
-      "status": "upcoming"
-    }
-  ],
-  "vaccines": [
-    {
-      "id": 1,
-      "visit_id": 1,
-      "name": "Rage",
-      "administration_date": "2023-06-15"
-    },
-    {
-      "id": 2,
-      "visit_id": 2,
-      "name": "Leucose féline",
-      "administration_date": "2023-09-10"
-    },
-    {
-      "id": 3,
-      "visit_id": 3,
-      "name": "Parvovirus",
-      "administration_date": "2022-12-05"
-    },
-    {
-      "id": 4,
-      "visit_id": 4,
-      "name": "Distemper",
-      "administration_date": null
+      "owner": {
+        "id": 3,
+        "name": "Claire Bernard",
+        "phone": "0623456789",
+        "email": "claire.bernard@example.com"
+      },
+      "visits": [
+        {
+          "id": 3,
+          "veterinarian": { "id": 1, "name": "Dr. Élodie Martin" },
+          "date": "2025-09-10",
+          "reason": "Nettoyage dentaire",
+          "status": "past",
+          "vaccines": [
+            { "id": 3, "name": "Parvovirus", "administration_date": "2022-12-05" }
+          ]
+        }
+      ]
     }
   ]
 }

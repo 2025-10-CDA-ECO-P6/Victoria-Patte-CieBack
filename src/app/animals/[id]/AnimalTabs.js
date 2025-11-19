@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function AnimalTabs({ animal }) {
+export default function AnimalTabs({ animal}) {
   const [activeTab, setActiveTab] = useState("informations");
 
   const tabs = [
@@ -10,9 +10,24 @@ export default function AnimalTabs({ animal }) {
       id: "informations",
       label: "Ses informations",
       content: (
-          <div >
-            <h1>Informations de {animal.name}</h1>           
-         </div>
+        <>
+          <section>
+            <h1>Informations de <strong>{animal.name}</strong></h1> 
+            <div>
+            <img src="/icons/dog.svg" alt="icone de chien" />
+            <p>{animal.species} - {animal.breed}</p>        
+            <p className="date">{animal.date_of_birth}</p>
+            </div>  
+         </section>
+         <section>
+             <h2>Propriétaire de <str>{animal.owner.name}</str></h2> 
+            <div>
+            <img src="/icons/dog.svg" alt="icone de chien" />
+            {/* <p>{owner.name} - {animal.breed}</p>        
+            <p className="date">{animal.date_of_birth}</p> */}
+            </div>  
+         </section>
+         </>
       ),
     },
     {
