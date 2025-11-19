@@ -1,22 +1,21 @@
 import Image from "next/image";
 import data from "../../../data/data.json";
+import styles from "./page.module.css";
+import AnimalTabs from "./AnimalTabs";
 
 export default async function AnimalDetails({ params }) {
   const { id } = await params;
    const animal = data.animals[id-1];
-console.log("params.id =", id);
-console.log("animal =", animal);
+
 
   if (!animal) {
     return <main><h1>Animal introuvable</h1></main>;
   }
 
   return (
-    <main>
-      <Image src={animal.picture} width={300}  height={300}/>
-
-      <h1>Details!</h1>
-     
+    <main className={styles.animalDetails}>
+      <Image src={animal.picture} alt={`Photo de ${animal.species}`} width={300}  height={300}/>
+     <AnimalTabs animal={animal} />
     </main>
   );
 }
