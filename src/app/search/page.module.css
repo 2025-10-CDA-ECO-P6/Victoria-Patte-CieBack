@@ -1,7 +1,7 @@
 .sectionNextVaccine {
   background-color: var(--color-primary);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 14px;
   margin-top: 1rem;
 
   display: flex;

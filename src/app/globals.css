@@ -25,7 +25,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--color-grey-dark);
   background: var(--background);
   font-family: "Manrope", sans-serif;
   -webkit-font-smoothing: antialiased;

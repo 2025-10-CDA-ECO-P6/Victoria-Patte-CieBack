@@ -36,7 +36,7 @@
       "species": "Chien",
       "breed": "Labrador",
       "date_of_birth": "2019-05-12",
-      "picture": "/pictureAnimals/Aska.jpg",
+      "picture": "/pictureAnimals/labrador.jpg",
       "owner_id": 1
     },
     {
@@ -45,15 +45,15 @@
       "species": "Chat",
       "breed": "Siamois",
       "date_of_birth": "2021-03-02",
-      "picture": "/pictureAnimals/Aska.jpg",
+      "picture": "/pictureAnimals/siamois.jpg",
       "owner_id": 2
     },
     {
       "id": 3,
-      "name": "Tango",
+      "name": "Aska",
       "species": "Chien",
       "breed": "Shiba Inu",
-      "date_of_birth": "2018-11-22",
+      "date_of_birth": "2021-10-13",
       "picture": "/pictureAnimals/Aska.jpg",
       "owner_id": 3
     }
