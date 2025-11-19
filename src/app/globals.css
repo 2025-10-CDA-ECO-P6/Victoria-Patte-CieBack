@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #757EFA;
+  --color-primary-light: #9CA8FB;
+  --color-grey-light: #CACACA;
+  --color-grey: #ADACAD;
+  --color-grey-dark: #3F3E3F;
 }
 
-@media (prefers-color-scheme: dark) {
+
+/* @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -16,10 +24,10 @@ body {
   overflow-x: hidden;
 }
 
-/* body {
+body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Manrope", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,7 +43,7 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
