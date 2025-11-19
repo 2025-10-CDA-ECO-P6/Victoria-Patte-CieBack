@@ -28,7 +28,7 @@ export default function Search() {
        <p>Les animaux : </p>
 
        {animals.map((animal) => 
-        <CardAnimal animal={animal} />
+        <CardAnimal animal={animal} key={animal.id}/>
        )}
       </section>
     </main>
