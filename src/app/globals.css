@@ -32,6 +32,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  padding: 2rem 1rem;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
