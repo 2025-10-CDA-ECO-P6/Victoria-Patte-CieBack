@@ -1,8 +1,11 @@
 import Image from "next/image";
 import styles from "./CardAnimal.module.css";
+import Link from "next/link";
 
 export default function CardAnimal({ animal }) {
   return (
+    <Link href={`/animals/${animal.id}`}>
+
     <article className={styles.cardAnimal}>
       <Image 
         src={animal.picture} 
@@ -21,5 +24,6 @@ export default function CardAnimal({ animal }) {
       </div>
       </div>
     </article>
+    </Link>
   );
 }

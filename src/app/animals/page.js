@@ -5,7 +5,7 @@ import CardAnimal from "@/components/cardAnimal/CardAnimal";
 import data from "../../data/data.json";
 
 
-export default function Search() {
+export default function Animals() {
 
     const animals = data.animals;
 
@@ -25,8 +25,6 @@ export default function Search() {
         />
       </section>
       <section >
-       <p>Les animaux : </p>
-
        {animals.map((animal) => 
         <CardAnimal animal={animal} key={animal.id}/>
        )}
