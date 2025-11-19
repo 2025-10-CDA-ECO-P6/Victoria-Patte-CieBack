@@ -1,8 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
+import CardAnimal from "@/components/cardAnimal/CardAnimal";
+import data from "../../data/data.json";
+
 
 export default function Search() {
+
+    const animals = data.animals;
+
   return (
     <main>
       <h1>Hello Human!</h1>
@@ -17,6 +23,13 @@ export default function Search() {
           width={150}
           height={125}
         />
+      </section>
+      <section >
+       <p>Les animaux : </p>
+
+       {animals.map((animal) => 
+        <CardAnimal animal={animal} />
+       )}
       </section>
     </main>
   );
