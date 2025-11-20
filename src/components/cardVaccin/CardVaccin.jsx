@@ -16,9 +16,8 @@ export default function CardVaccin({ vaccin }) {
               className={styles.vetImage} 
             />
             <div>
-            <h2>{vaccin.veterinarian}</h2> 
-            <p>{vaccin.vaccins[0].name}</p> 
-            <p>{vaccin.vaccins[0].administration_date}</p> 
+            <h2>{vaccin.name}</h2> 
+            <p>{vaccin.administration_date}</p> 
             </div> 
           </li>
   );

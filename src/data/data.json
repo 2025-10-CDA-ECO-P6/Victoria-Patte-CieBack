@@ -19,7 +19,9 @@
         {
           "id": 1,
           "name": "Rage",
-          "administration_date": "2023-06-15"
+          "administration_date": "2023-06-15",
+          "veterinarian_id": 1,
+          "animal_id": 1
         }
       ],
 
@@ -28,33 +30,21 @@
           "id": 1,
           "date": "2025-11-20",
           "reason": "Vaccination annuelle",
-          "status": "À venir",
-
+          "status": "à venir",
           "veterinarian": {
             "id": 1,
             "name": "Dr. Élodie Martin"
-          },
-
-          "vaccines": []
+          }
         },
         {
           "id": 4,
           "date": "2025-12-01",
           "reason": "Contrôle futur",
-          "status": "Annulé",
-
+          "status": "annulée",
           "veterinarian": {
             "id": 2,
             "name": "Dr. Lucas Bernard"
-          },
-
-          "vaccines": [
-            {
-              "id": 4,
-              "name": "Distemper",
-              "administration_date": null
-            }
-          ]
+          }
         }
       ]
     },
@@ -74,27 +64,26 @@
         "email": "emma.martin@example.com"
       },
 
-      "vaccines": [],
+      "vaccines": [
+        {
+          "id": 2,
+          "name": "Leucose féline",
+          "administration_date": "2023-09-10",
+          "veterinarian_id": 2,
+          "animal_id": 2
+        }
+      ],
 
       "visits": [
         {
           "id": 2,
           "date": "2025-10-15",
           "reason": "Contrôle général",
-          "status": "Passée",
-
+          "status": "passée",
           "veterinarian": {
             "id": 2,
             "name": "Dr. Lucas Bernard"
-          },
-
-          "vaccines": [
-            {
-              "id": 2,
-              "name": "Leucose féline",
-              "administration_date": "2023-09-10"
-            }
-          ]
+          }
         }
       ]
     },
@@ -114,27 +103,33 @@
         "email": "claire.bernard@example.com"
       },
 
-      "vaccines": [],
+      "vaccines": [
+        {
+          "id": 3,
+          "name": "Parvovirus",
+          "administration_date": "2022-12-05",
+          "veterinarian_id": 1,
+          "animal_id": 3
+        },
+         {
+          "id": 4,
+          "name": "CHPPiL4",
+          "administration_date": "2022-12-05",
+          "veterinarian_id": 1,
+          "animal_id": 3
+        }
+      ],
 
       "visits": [
         {
           "id": 3,
           "date": "2025-09-10",
           "reason": "Nettoyage dentaire",
-          "status": "Passée",
-
+          "status": "passée",
           "veterinarian": {
             "id": 1,
             "name": "Dr. Élodie Martin"
-          },
-
-          "vaccines": [
-            {
-              "id": 3,
-              "name": "Parvovirus",
-              "administration_date": "2022-12-05"
-            }
-          ]
+          }
         }
       ]
     }

@@ -7,12 +7,7 @@ export default async function AnimalDetails({ params }) {
   const { id } = await params;
   const animal = data.animals[id-1];
   const visits = animal.visits.length > 0 ? animal.visits : ["Aucune consultation"];
-  const vaccins = animal.visits.map(visit => ({
-    id: visit.id,
-    veterinarian: visit.veterinarian.name,
-    date: visit.date,
-    vaccins: visit.vaccines.length > 0 ? visit.vaccines : ["Aucun vaccin"]
-  }));
+  const vaccins = animal.vaccines.length > 0 ? animal.vaccines : ["Aucun vaccin"];
 
 
   if (!animal) {
