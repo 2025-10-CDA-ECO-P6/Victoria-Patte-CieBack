@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import styles from "./AnimalTabs.module.css";
 
 export default function AnimalTabs({ animal}) {
   const [activeTab, setActiveTab] = useState("informations");
@@ -54,18 +55,20 @@ export default function AnimalTabs({ animal}) {
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
 
   return (
-      <div>
+    <>
+      <div className={styles.tabButtons}>
         {tabs.map((tab) => (
-          <button
+          <button className={activeTab === tab.id? styles.buttonActive : ""}
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}
           </button>
         ))}
-      <div>
+        </div>
+      <section>
         {activeTabData?.content}
-      </div>
-    </div>
+      </section>
+      </>
   );
 }

@@ -1,0 +1,10 @@
+.tabButtons {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    gap: 1rem;
+}
+.buttonActive {
+    background-color: var(--color-primary-light);
+    color: var(--background);
+}
