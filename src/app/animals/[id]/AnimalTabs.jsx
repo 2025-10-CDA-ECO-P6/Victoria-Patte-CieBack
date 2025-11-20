@@ -19,13 +19,14 @@ export default function AnimalTabs({ animal}) {
             <p className="date">{animal.date_of_birth}</p>
             </div>  
          </section>
-         <section>
-             <h2>Propriétaire de <str>{animal.owner.name}</str></h2> 
+         <section className="ownerSection">
+             <h2> Propriétaire de <strong>{animal.name}</strong></h2> 
             <div>
             <img src="/icons/dog.svg" alt="icone de chien" />
-            {/* <p>{owner.name} - {animal.breed}</p>        
-            <p className="date">{animal.date_of_birth}</p> */}
+            <p>{animal.owner.name}</p>
             </div>  
+            <p>Tel : {animal.owner.phone}</p>
+            <p>Email : {animal.owner.email}</p>
          </section>
          </>
       ),

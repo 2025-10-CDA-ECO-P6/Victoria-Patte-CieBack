@@ -6,8 +6,6 @@ import AnimalTabs from "./AnimalTabs";
 export default async function AnimalDetails({ params }) {
   const { id } = await params;
    const animal = data.animals[id-1];
-//    const owner = data.owners[animal.owner_id -1];
-//    console.info(owner);
 
 
   if (!animal) {
