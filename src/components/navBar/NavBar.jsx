@@ -21,6 +21,7 @@ export default function NavBar() {
           width={32}
           height={32}
         />
+        {/* <svg src= "/icons/dog.svg"/> */}
       </Link>
     </nav>
   );

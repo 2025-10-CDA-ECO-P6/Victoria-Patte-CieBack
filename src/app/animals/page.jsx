@@ -17,12 +17,6 @@ export default function Animals() {
         <p>Pepette sera vaccinée demain à 7h00 !</p>
         <Link href="/">Voir les details</Link>
         </div>
-         <Image
-          src="/kittenHeader.png"
-          alt="chaton tigré"
-          width={150}
-          height={125}
-        />
       </section>
       <section >
        {animals.map((animal) => 

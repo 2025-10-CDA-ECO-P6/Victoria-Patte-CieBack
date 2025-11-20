@@ -3,6 +3,10 @@
   padding: 1rem;
   border-radius: 14px;
   margin-top: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  background-image: url('/KittenHeader.png');
 
   display: flex;
   align-items: center;
