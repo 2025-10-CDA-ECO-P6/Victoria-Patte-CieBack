@@ -3,7 +3,9 @@
 import { useState } from "react";
 import styles from "./AnimalTabs.module.css";
 import CardVisit from "../cardVisit/CardVisit";
-export default function AnimalTabs({ animal, visits}) {
+import CardVaccin from "../cardVaccin/CardVaccin";
+
+export default function AnimalTabs({ animal, visits, vaccins}) {
   const [activeTab, setActiveTab] = useState("informations");
   const tabs = [
     {
@@ -39,7 +41,7 @@ export default function AnimalTabs({ animal, visits}) {
       content: (
         <ul >
           {visits.map((visit) => (
-          <CardVisit visit={visit} />
+          <CardVisit  key={visit.id} visit={visit} />
         ))}
         </ul>
       ),
@@ -48,8 +50,10 @@ export default function AnimalTabs({ animal, visits}) {
       id: "vaccins",
       label: "Vaccins",
       content: (
-        <ul >
-            <li >Aucun vaccin</li>
+       <ul >
+          {vaccins.map((vaccin) => (
+          <CardVaccin  key={vaccin.id} vaccin={vaccin} />
+        ))}
         </ul>
       ),
     },

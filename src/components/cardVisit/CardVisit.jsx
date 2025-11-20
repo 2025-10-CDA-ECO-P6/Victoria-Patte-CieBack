@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./CardVisit.module.css";
-import Link from "next/link";
 
 export default function CardVisit({ visit }) {
   return (
@@ -11,8 +10,8 @@ export default function CardVisit({ visit }) {
             <Image 
               src="/vet.jpg" 
               alt="photo vétérinaire avec un chiot" 
-              width={200} 
-              height={200}
+              width={100} 
+              height={100}
               className={styles.vetImage} 
             />
             <div>

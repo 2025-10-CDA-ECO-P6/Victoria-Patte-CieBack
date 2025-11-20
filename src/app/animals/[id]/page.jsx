@@ -7,8 +7,12 @@ export default async function AnimalDetails({ params }) {
   const { id } = await params;
   const animal = data.animals[id-1];
   const visits = animal.visits.length > 0 ? animal.visits : ["Aucune consultation"];
-
-
+  const vaccins = animal.visits.map(visit => ({
+    id: visit.id,
+    veterinarian: visit.veterinarian.name,
+    date: visit.date,
+    vaccins: visit.vaccines.length > 0 ? visit.vaccines : ["Aucun vaccin"]
+  }));
 
 
   if (!animal) {
@@ -16,9 +20,22 @@ export default async function AnimalDetails({ params }) {
   }
 
   return (
-    <main className={styles.animalDetails}>
-      <Image className= {styles.imageAnimal}src={animal.picture} alt={`Photo de ${animal.species}`} width={300}  height={300}/>
-     <AnimalTabs animal={animal} visits = {visits}/>
-    </main>
+<main className={styles.animalDetails} style={{ position: "relative" }}>
+  <div style={{ position: "relative", width: "100%", aspectRatio: "1 / 1" }}>
+    <Image
+      src={animal.picture}
+      alt={`Photo de ${animal.species}`}
+      fill
+      loading="eager"
+      style={{
+        objectFit: "cover",
+        objectPosition: "center",
+        borderRadius: "16px"
+      }}
+    />
+  </div>
+
+  <AnimalTabs animal={animal} visits={visits} vaccins = {vaccins} />
+</main>
   );
 }

@@ -12,8 +12,6 @@
 }
 
 .vetImage {
-    width: auto;
-    height: 6rem;
     object-fit: cover;
     object-position: 50% 50%;
     border-radius: 8px;
