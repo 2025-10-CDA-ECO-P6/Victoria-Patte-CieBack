@@ -20,7 +20,8 @@ export default function Animals() {
          <Image
           src="/kittenHeader.png"
           alt="chaton tigré"
-          fill
+          width={150}
+          height={125}
         />
       </section>
       <section >

@@ -5,8 +5,4 @@
         object-position: 50% 25%;;
         border-radius: 16px;
     }
-
-    & .ownerSection {
-        background-color: aqua;
-    }
 }

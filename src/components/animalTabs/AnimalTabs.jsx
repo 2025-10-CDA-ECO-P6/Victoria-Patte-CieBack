@@ -12,18 +12,20 @@ export default function AnimalTabs({ animal}) {
       label: "Ses informations",
       content: (
         <>
-          <section>
+          <section className={styles.informationContent}>
             <h1>Informations de <strong>{animal.name}</strong></h1> 
             <div>
             <img src="/icons/dog.svg" alt="icone de chien" />
-            <p>{animal.species} - {animal.breed}</p>        
-            <p className="date">{animal.date_of_birth}</p>
-            </div>  
+            <p>{animal.species} - {animal.breed}</p> 
+            <p className={styles.date}>{animal.date_of_birth}</p>
+       
+            </div> 
+ 
          </section>
-         <section className="ownerSection">
+         <section className={styles.ownerSection}>
              <h2> Propriétaire de <strong>{animal.name}</strong></h2> 
             <div>
-            <img src="/icons/dog.svg" alt="icone de chien" />
+            <img src="/icons/Smile.svg" alt="icone de chien" />
             <p>{animal.owner.name}</p>
             </div>  
             <p>Tel : {animal.owner.phone}</p>

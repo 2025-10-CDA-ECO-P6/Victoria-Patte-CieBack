@@ -8,3 +8,35 @@
     background-color: var(--color-primary-light);
     color: var(--background);
 }
+
+.informationContent, .ownerSection {
+    box-shadow: 0 0 8px 8px rgba(68, 68, 68, 0.04);
+    border-radius: 14px;
+    margin-top: 1rem;
+    padding: 1.4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    & div {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    & strong {
+        color : var(--color-primary);
+    }
+
+    & img {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-right: 0.41rem;
+    }
+}
+
+.date {
+    color: var(--color-grey);
+    font-weight: 200;
+    margin-left: auto;
+}
