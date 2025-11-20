@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import styles from "./AnimalTabs.module.css";
-
+import CardVisit from "../cardVisit/CardVisit";
 export default function AnimalTabs({ animal, visits}) {
   const [activeTab, setActiveTab] = useState("informations");
-console.info(visits);
   const tabs = [
     {
       id: "informations",
@@ -39,15 +38,8 @@ console.info(visits);
       label: "Consultations",
       content: (
         <ul >
-             {visits.map((visit) => (
-          <li 
-            key={visit.id}           
-          >
-            {visit.date}
-            {visit.reason}
-            {visit.status}
-            {visit.veterinarian.name}
-          </li>
+          {visits.map((visit) => (
+          <CardVisit visit={visit} />
         ))}
         </ul>
       ),
