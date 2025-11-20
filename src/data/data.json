@@ -19,7 +19,7 @@
           "veterinarian": { "id": 1, "name": "Dr. Élodie Martin" },
           "date": "2025-11-20",
           "reason": "Vaccination annuelle",
-          "status": "upcoming",
+          "status": "À venir",
           "vaccines": [
             { "id": 1, "name": "Rage", "administration_date": "2023-06-15" }
           ]
@@ -29,7 +29,7 @@
           "veterinarian": { "id": 2, "name": "Dr. Lucas Bernard" },
           "date": "2025-12-01",
           "reason": "Contrôle futur",
-          "status": "upcoming",
+          "status": "Annulé",
           "vaccines": [
             { "id": 4, "name": "Distemper", "administration_date": null }
           ]
@@ -55,7 +55,7 @@
           "veterinarian": { "id": 2, "name": "Dr. Lucas Bernard" },
           "date": "2025-10-15",
           "reason": "Contrôle général",
-          "status": "past",
+          "status": "Passée",
           "vaccines": [
             { "id": 2, "name": "Leucose féline", "administration_date": "2023-09-10" }
           ]
@@ -81,7 +81,7 @@
           "veterinarian": { "id": 1, "name": "Dr. Élodie Martin" },
           "date": "2025-09-10",
           "reason": "Nettoyage dentaire",
-          "status": "past",
+          "status": "Passée",
           "vaccines": [
             { "id": 3, "name": "Parvovirus", "administration_date": "2022-12-05" }
           ]

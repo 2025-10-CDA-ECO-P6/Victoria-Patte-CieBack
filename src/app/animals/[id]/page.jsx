@@ -17,7 +17,7 @@ export default async function AnimalDetails({ params }) {
 
   return (
     <main className={styles.animalDetails}>
-      <Image src={animal.picture} alt={`Photo de ${animal.species}`} width={300}  height={300}/>
+      <Image className= {styles.imageAnimal}src={animal.picture} alt={`Photo de ${animal.species}`} width={300}  height={300}/>
      <AnimalTabs animal={animal} visits = {visits}/>
     </main>
   );
