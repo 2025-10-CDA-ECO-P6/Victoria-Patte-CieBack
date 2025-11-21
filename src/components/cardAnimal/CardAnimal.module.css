@@ -8,7 +8,7 @@
         width: 30vw;
         height: 25vw;
         object-fit: cover;
-        object-position: 50% 25%;;
+        object-position: 50% 25%;
         border-radius: 8px;
         margin-right: 1rem;
     }
@@ -33,4 +33,11 @@
             }
         }
     }
+}
+
+@media (min-width: 767px) {
+  .cardAnimal .mainImage{
+  width: 15vw;
+  height: 20vh;
+  } 
 }

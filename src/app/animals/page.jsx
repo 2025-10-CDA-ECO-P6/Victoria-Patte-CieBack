@@ -50,7 +50,7 @@ const nextVisit = upcomingVisits[0];
         </section>
       )}
 
-      <section>
+      <section className={styles.allAnimals}>
         {animals.map((animal) => (
           <CardAnimal animal={animal} key={animal.id} />
         ))}
