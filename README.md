@@ -25,6 +25,8 @@ Le dossier `docs` contient :
 - `usecase.md` : cas d'utilisation
 - `mcd.png` : Modèle Conceptuel de Données (MCD)
 - `dictionnaire_de_donnees.md` : dictionnaire de données 
+- `maquettes.png` : contient les maquettes
+- `prototype-preview` : un aperçu du prototype
 
 
 ---
