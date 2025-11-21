@@ -5,15 +5,15 @@
       "name": "Roxy",
       "species": "Chien",
       "breed": "Courant-Beagle",
-      "date_of_birth": "2019-05-12",
+      "date_of_birth": "2020-06-12",
       "gender": "Female",
       "weight": 12.5,
       "picture": "/pictureAnimals/Roxy.jpg",
       "owner": {
         "id": 1,
-        "name": "Jean Dupont",
+        "name": "Thomas Mnl",
         "phone": "0612345678",
-        "email": "jean.dupont@example.com"
+        "email": "Thomas.dupont@example.com"
       },
       "vaccines": [
         {
@@ -53,15 +53,15 @@
       "name": "Kurty",
       "species": "Chat",
       "breed": "Européen",
-      "date_of_birth": "2021-03-02",
+      "date_of_birth": "2018-03-02",
       "gender": "Male",
-      "weight": 4.3,
+      "weight": 7.3,
       "picture": "/pictureAnimals/Kurty.jpg",
       "owner": {
         "id": 2,
-        "name": "Emma Martin",
+        "name": "Victoria Fnt",
         "phone": "0698765432",
-        "email": "emma.martin@example.com"
+        "email": "victoria.ftn@example.com"
       },
       "vaccines": [
         {
@@ -92,14 +92,14 @@
       "species": "Chien",
       "breed": "Shiba Inu",
       "date_of_birth": "2021-10-13",
-      "gender": "Female",
-      "weight": 8.2,
+      "gender": "Male",
+      "weight": 11,
       "picture": "/pictureAnimals/Aska.jpg",
       "owner": {
-        "id": 3,
-        "name": "Claire Bernard",
-        "phone": "0623456789",
-        "email": "claire.bernard@example.com"
+        "id": 2,
+        "name": "Victoria Fnt",
+        "phone": "0698765432",
+        "email": "victoria.ftn@example.com"
       },
       "vaccines": [
         {
