@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./CardVisit.module.css";
+import { formatDate } from "@/helpers/formatDate";
 
 export default function CardVisit({ visit }) {
   return (
@@ -17,7 +18,7 @@ export default function CardVisit({ visit }) {
             <div>
             <h2>{visit.veterinarian.name}</h2> 
             <p>{visit.reason}</p> 
-            <p>{visit.date}</p> 
+            <p>{formatDate(visit.date)}</p> 
             <p>{visit.status}</p>
             </div> 
           </li>

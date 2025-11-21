@@ -4,12 +4,12 @@ import { useState } from "react";
 import styles from "./AnimalTabs.module.css";
 import CardVisit from "../cardVisit/CardVisit";
 import CardVaccin from "../cardVaccin/CardVaccin";
+import { formatDate } from "@/helpers/formatDate";
 
 export default function AnimalTabs({ animal, visits, vaccins}) {
-  const [activeTab, setActiveTab] = useState("informations");
+  const [activeTab, setActiveTab] = useState(0);
   const tabs = [
     {
-      id: "informations",
       label: "Ses informations",
       content: (
         <>
@@ -18,7 +18,7 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
             <div>
             <img src="/icons/dog.svg" alt="icone de chien" />
             <p>{animal.species} - {animal.breed}</p> 
-            <p className={styles.date}>{animal.date_of_birth}</p>
+            <p className={styles.date}>{formatDate(animal.date_of_birth)}</p>
        
             </div> 
  
@@ -36,7 +36,6 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
       ),
     },
     {
-      id: "consultations",
       label: "Consultations",
       content: (
         <ul >
@@ -47,7 +46,6 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
       ),
     },
     {
-      id: "vaccins",
       label: "Vaccins",
       content: (
        <ul >
@@ -59,15 +57,15 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
     },
   ];
 
-  const activeTabData = tabs.find((tab) => tab.id === activeTab);
+  const activeTabData = tabs.find((_ , i) =>i === activeTab);
 
   return (
     <>
       <div className={styles.tabButtons}>
-        {tabs.map((tab) => (
-          <button className={activeTab === tab.id? styles.buttonActive : ""}
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
+        {tabs.map((tab, i) => (
+          <button className={activeTab === i? styles.buttonActive : ""}
+            key={i}
+            onClick={() => setActiveTab(i)}
           >
             {tab.label}
           </button>

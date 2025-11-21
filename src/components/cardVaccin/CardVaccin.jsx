@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./CardVaccin.module.css";
+import { formatDate } from "@/helpers/formatDate";
 
 export default function CardVaccin({ vaccin }) {
     return (
@@ -18,7 +19,7 @@ export default function CardVaccin({ vaccin }) {
             <h2>{vaccin.name}</h2>
             <div className={styles.vaccinDate}>
             <img src="/icons/calandar-p.svg" alt="icone calandrier" />
-            <p>{vaccin.administration_date}</p> 
+            <p>{formatDate(vaccin.administration_date)}</p> 
             </div> 
             </div> 
           </li>
