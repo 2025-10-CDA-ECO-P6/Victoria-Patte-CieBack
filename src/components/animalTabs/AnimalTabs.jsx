@@ -61,7 +61,7 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
   const activeTabData = tabs.find((_ , i) =>i === activeTab);
 
   return (
-    <>
+    <section>
       <div className={styles.tabButtons}>
         {tabs.map((tab, i) => (
           <button className={activeTab === i? styles.buttonActive : ""}
@@ -75,6 +75,6 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
       <section>
         {activeTabData?.content}
       </section>
-      </>
+      </section>
   );
 }

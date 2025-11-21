@@ -5,3 +5,21 @@
                 color: var(--color-primary)    
         }
 }
+.pictureWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+@media (min-width: 768px) {
+
+  .animalDetailsContent {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .pictureWrapper {
+        width: 50%; 
+        max-width: 350px;  }
+
+}
