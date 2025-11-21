@@ -38,3 +38,47 @@
     letter-spacing: 0.05em;
   }
 }
+
+@media (min-width: 767px) {
+  .main {
+    background-size: contain;
+    background-position: center right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5vw;
+    
+    & .logo {
+    width: 50px;
+    }
+
+    & section {
+      width: 50vw;
+      max-width: 600px;
+      text-align: left;
+    }
+    
+    & h1 {
+      font-size: 2rem;
+      padding: 1rem 0;
+      text-align: left;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    & h2 {
+      font-size: 1.3rem;
+      padding: 1rem 0;
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    & a {
+      width: 12rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

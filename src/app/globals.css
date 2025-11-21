@@ -49,3 +49,10 @@ button {
   font-weight: 700;
   border-radius: 8px;
 }
+
+@media (min-width: 1024px) {
+ main {
+    padding: 2rem 6rem;
+
+ }
+}
