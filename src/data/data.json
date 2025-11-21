@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Roxy",
       "species": "Chien",
-      "breed": "Courant-Beagle",
+      "breed": "Courant/Beagle",
       "date_of_birth": "2020-06-12",
       "gender": "Female",
       "weight": 12.5,

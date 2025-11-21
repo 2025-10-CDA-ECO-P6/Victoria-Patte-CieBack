@@ -16,6 +16,7 @@ export default async function AnimalDetails({ params }) {
 
   return (
 <main className={styles.animalDetails} style={{ position: "relative" }}>
+ <h1>Carnet de santé de <strong>{animal.name}</strong></h1>
   <div style={{ position: "relative", width: "100%", aspectRatio: "1 / 1" }}>
     <Image
       src={animal.picture}

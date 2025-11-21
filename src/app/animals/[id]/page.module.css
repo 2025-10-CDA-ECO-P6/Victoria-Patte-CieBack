@@ -1,7 +1,7 @@
-/* .animalDetails .imageAnimal {
-        width: 100%;
-        object-fit: cover;
-        object-position: 50% 25%;;
-        border-radius: 16px;
-    
-} */
+.animalDetails h1 { 
+        padding: 0rem 2rem 1rem 2rem;
+        text-align: center;
+        & strong {
+                color: var(--color-primary)    
+        }
+}

@@ -14,16 +14,16 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
       content: (
         <>
           <section className={styles.informationContent}>
-            <h1>Informations de <strong>{animal.name}</strong></h1> 
-            <div>
-            <img src="/icons/dog-p.svg" alt="icone de chien" />
-            <p>{animal.species} - {animal.breed}</p> 
-            <p className={styles.date}>{formatDate(animal.date_of_birth)}</p>            
-            </div> 
-            <p>Genre : {animal.gender} </p>
-            <p>poids : {animal.weight} kg</p>
- 
-         </section>
+            <div className={styles.header}>
+              <img src="/icons/dog-p.svg" alt="Icône de l'animal" />
+              <h2>{animal.species} - {animal.breed}</h2>
+            </div>
+            <p>Poids : {animal.weight} kg</p>
+            <div className={styles.infoRow}>
+              <p>Genre : {animal.gender}</p>
+              <p className={styles.date}>{formatDate(animal.date_of_birth)}</p>
+            </div>
+          </section>
          <section className={styles.ownerSection}>
              <h2> Propriétaire de <strong>{animal.name}</strong></h2> 
             <div>
