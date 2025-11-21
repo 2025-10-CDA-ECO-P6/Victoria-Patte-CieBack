@@ -38,6 +38,35 @@
     letter-spacing: 0.05em;
   }
 }
+@media (max-height: 667px) {
+  .main {
+    background-size: contain;
+    background-position: bottom right;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-start;
+    padding-left: 5vw;
+    & h2 {
+      padding: 0;
+    }
+}}
+
+@media (min-width:508px) {
+  .main {
+    background-size: contain;
+    background-position: bottom right;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-start;
+    padding-left: 5vw;
+    & h2 {
+      padding: 0;
+    }
+}}
 
 @media (min-width: 767px) {
   .main {
