@@ -1,10 +1,25 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Welcome to My Next.js App</h1>
+      <section>
+      <h1>
+      <Image 
+        src="/logoHealthyPet.svg" 
+        alt="logo de healthypet" 
+        width={30} 
+        height={25}
+        // className={styles.mainImage} 
+
+      />
+        healthypet
+      </h1>
+      <h2>Nous vous aidons à garder votre <strong>compagnon</strong> en bonne santé !</h2>
+    </section>
+    <Link href="/">ME CONNECTER</Link>
     </main>
   );
 }
