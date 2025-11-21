@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Carnet de Santé Animalier - Application Next.js
 
-## Getting Started
+## Description
 
-First, run the development server:
+Cette application permet de gérer les animaux, leurs propriétaires, les visites vétérinaires et les vaccins.  
+Elle est développée avec **Next.js** et utilise un fichier JSON (`src/data/data.json`) pour les données initiales (destiné à être remplacé par un back-end dans le futur).
+
+---
+
+## Fonctionnalités principales
+
+- Liste des animaux avec détails (photo, espèce, race, sexe, poids, propriétaire)
+- Consultation des visites vétérinaires passées et à venir
+- Gestion des vaccins avec statut
+- Affichage de la prochaine visite à venir
+- Structure de composants modulaires (`CardAnimal`, `AnimalTabs`, `NavBar`, etc.)
+
+---
+
+## Dossier `docs/`
+
+Le dossier `docs` contient :
+
+- `personas.md` : descriptions des utilisateurs types
+- `usecase.md` : cas d'utilisation
+- `mcd.png` : Modèle Conceptuel de Données (MCD)
+- `dictionnaire_de_donnees.md` : dictionnaire de données 
+
+
+---
+
+## Structure du JSON (`src/data/data.json`)
+
+Le JSON contient les animaux et leurs relations avec les visites et vaccins. 
+
+## Installation et lancement
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Installer les dépendances
+pnpm install
+
+# Lancer le projet en développement
 pnpm dev
-# or
-bun dev
+
+# Build pour production
+pnpm build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies utilisées
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Next.js
+- React
+- CSS Modules
+- JSON local pour les données initiales
+- Vercel pour le déploiement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure des dossiers
 
-## Learn More
+```
+/src
+  /components   # composants réutilisables
+  /data         # fichier data.json
+  /pages        # pages Next.js
+  /helpers      # fonctions utilitaires (ex: formatDate)
+  /styles       # fichiers CSS
+/docs           # personas, usecase, MCD, dictionnaire de données
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Deploiement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Le front est déployé sur vercel depuis la branche main.
+https://patte-and-cie.vercel.app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
