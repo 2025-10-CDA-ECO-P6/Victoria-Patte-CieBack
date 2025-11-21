@@ -1,5 +1,6 @@
 # Dictionnaire de données 
 
+
 | Table        | Code                        | Libellé / Description                         | Type    | Taille | Règles de gestion                                                    |
 |--------------|-----------------------------|-----------------------------------------------|---------|--------|-----------------------------------------------------------------------|
 | owner        | id_owner                    | Identifiant unique du propriétaire            | integer | -      | obligatoire, unique                                                   |
@@ -13,6 +14,8 @@
 | animal       | species_animal              | Espèce (ex : Chien, Chat)                     | varchar | 50     | obligatoire                                                           |
 | animal       | breed_animal                | Race                                          | varchar | 50     | obligatoire                                                           |
 | animal       | date_of_birth_animal        | Date de naissance                             | date    | -      | obligatoire                                                           |
+| animal       | gender_animal               | Sexe de l’animal                               | varchar | 10     | obligatoire, ENUM (Male/Female/Autre)                                 |
+| animal       | weight_animal               | Poids de l’animal                              | decimal | 5,2    | facultatif, en kg                                                     |
 | animal       | picture_animal              | URL ou chemin de la photo                     | varchar | 255    | obligatoire                                                           |
 | animal       | owner_id_animal             | Identifiant du propriétaire                   | integer | -      | obligatoire, clé étrangère (owner.id_owner)                           |
 | visit        | id_visit                    | Identifiant unique de la visite               | integer | -      | obligatoire, unique                                                   |
@@ -24,6 +27,7 @@
 | vaccine      | id_vaccine                  | Identifiant unique du vaccin                  | integer | -      | obligatoire, unique                                                   |
 | vaccine      | name_vaccine                | Nom du vaccin                                 | varchar | 50     | obligatoire                                                           |
 | vaccine      | administration_date_vaccine | Date d’administration                         | date    | -      | nullable                                                              |
+| vaccine      | status_vaccine              | Statut (« à venir », « passée », « annulée ») | varchar | 20     | obligatoire, ENUM                                                     |
 | vaccine      | animal_id_vaccine           | Identifiant de l’animal vacciné               | integer | -      | nullable, clé étrangère (animal.id_animal)                           |
 | vaccine      | veterinarian_id_vaccine     | Identifiant du vétérinaire ayant injecté      | integer | -      | nullable, clé étrangère (veterinarian.id_veterinarian)              |
 
@@ -47,7 +51,6 @@
 - 1 vétérinaire : 0 à n vaccins  
 - 1 vaccin peut être non injecté (veterinarian_id_vaccine = NULL)  
 - Si injecté → lié à 1 seul vétérinaire
-
 
 ### Owners → Animals
 - 1 owner peut posséder 0 à n animals

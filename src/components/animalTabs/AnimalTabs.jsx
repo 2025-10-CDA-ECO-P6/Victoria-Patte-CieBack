@@ -16,7 +16,7 @@ export default function AnimalTabs({ animal, visits, vaccins}) {
           <section className={styles.informationContent}>
             <h1>Informations de <strong>{animal.name}</strong></h1> 
             <div>
-            <img src="/icons/dog.svg" alt="icone de chien" />
+            <img src="/icons/dog-p.svg" alt="icone de chien" />
             <p>{animal.species} - {animal.breed}</p> 
             <p className={styles.date}>{formatDate(animal.date_of_birth)}</p>
        
