@@ -12,8 +12,6 @@ export default function Home() {
         alt="logo de healthypet" 
         width={30} 
         height={25}
-        // className={styles.mainImage} 
-
       />
         healthypet
       </h1>
